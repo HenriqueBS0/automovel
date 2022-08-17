@@ -1,13 +1,18 @@
-import java.util.ArrayList;
-
 public class Carro extends Automovel {
-
     private String modelo;
     private String placa;
-    private ArrayList<Roda> rodas;
 
-    public Carro(Motor motor, ArrayList<Roda> rodas) {
-        super(motor);
-        this.rodas = rodas;
+    public Carro(String modelo, String placa, Motor motor, int capacidadeTanque) {
+        super(motor, capacidadeTanque);
+        this.modelo = modelo;
+        this.placa = placa;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getPlaca() {
+        return placa;
     }
 }
